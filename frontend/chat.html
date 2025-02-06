@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Room</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <h4>Chat Room - <span id="roomName"></span></h4>
+                        <button id="logoutBtn" class="btn btn-danger btn-sm">Logout</button>
+                    </div>
+                    <div class="chat-box" id="chatBox"></div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Type a message..." autocomplete="off">
+                        <button id="sendMessageBtn" class="btn btn-primary">Send</button>
+                    </div>
+                    <div id="typingIndicator" class="typing-indicator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
